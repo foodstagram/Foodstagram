@@ -1,6 +1,3 @@
-Original App Design Project - README Template
-===
-
 # FOODSTAGRAM
 
 ## Table of Contents
@@ -14,13 +11,12 @@ Original App Design Project - README Template
 Foodstagram is a convenient app to show off all your food. Keep all your meals on your own feed, and share with friends!
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Social Networking / Food
+- **Mobile:** Mobile version would be easiest to use, due to direct picture uploading, but other platforms can work too.
+- **Story:** Post and view feeds of foods
+- **Market:** Any individual can use this app, since people of all ages and parts of the world like to photograph their food.
+- **Habit:** This app can be habit forming for those who liek to take photos of their food, or to check on food.
+- **Scope:** First this project would target users who are already interested in food, such as food blog sand food videos. Then we can broaden it to the general public. 
 
 ## Product Spec
 
@@ -42,33 +38,40 @@ Foodstagram is a convenient app to show off all your food. Keep all your meals o
 
 ### 2. Screen Archetypes
 
-* [Welcome Page]
-   * [User can create account/ login]
-   * ...
-* [Home Page feed]
-   * [User can view a feed of photos]
-   * ...
+* Welcome Page
+   * User can create account/ login
+* Home Page feed
+   * User can view a feed of photos
+* Detailed Photo Page
+    * View comments on photo, and detailed post description
+* User Posts
+    * Feed of user's profile posts
+* Add Post
+    * Screen to select photo and write description
+* Settings & Logout
+    * Change settings and logout of app
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* My Feed - personal posts
+* Home -  feed of posts
+* Account - settings
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login/ Signup
+   * login -> Home
+   * signup -> verification -> home
+* Home Feed
+   * when photo clicked -> detailed photo view
+* All Screens after logging in
+    * Add post
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://i.imgur.com/yGGDaZd.png
+" width=600>
 
 
 
