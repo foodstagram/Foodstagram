@@ -70,8 +70,7 @@ Foodstagram is a convenient app to show off all your food. Keep all your meals o
     * Add post
 
 ## Wireframes
-<img src="https://i.imgur.com/yGGDaZd.png
-" width=600>
+<img src="https://i.imgur.com/yGGDaZd.png" width=600>
 
 
 
