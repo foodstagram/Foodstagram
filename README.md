@@ -70,20 +70,74 @@ Foodstagram is a convenient app to show off all your food. Keep all your meals o
     * Add post
 
 ## Wireframes
-<img src="https://i.imgur.com/yGGDaZd.png" width=600>
+<img src="https://i.imgur.com/yGGDaZd.png
+" width=600>
 
 
 
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
-## Schema
-[This section will be completed in Unit 9]
+## Schema 
 ### Models
-[Add table of models]
+#### Post
+  | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | user        | Pointer to User| image creator |
+   | image         | File     | image that user posts |
+   | caption       | String   | image caption by user |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+#### List of network requests by screen
+   - My Posts Feed Screen
+      - (Read/GET) Query all posts where user is author
+         ```swift
+         let query = PFQuery(className:"Post")
+         query.whereKey("user", equalTo: currentUser)
+         query.order(byDescending: "createdAt")
+         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let posts = posts {
+               print("Successfully retrieved \(posts.count) posts.")
+            }
+         }
+         ```
+
+   - Home Feed Screen
+      - (Read/GET) Query random posts by all users
+         ```swift
+         let query = PFQuery(className:"Post")
+         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let posts = posts {
+               print("Successfully retrieved \(posts.count) posts.")
+            }
+         }
+        ```
+
+   - Create Post Screen 
+      - (Create/POST) Create a new post object
+        ```swift
+        override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated) 
+        let query = PFQuery(className:"Posts")
+        query.includeKey("user")
+        query.limit = 20
+        
+        query.findObjectsInBackground { ( posts, error ) in
+            if posts != nil {
+                self.posts = posts!
+                self.tableView.reloadData()
+        } }
+         ```
+  
+   - Profile Screen
+      - (Read/GET) Query logged in user object
+        ```swift
+        let profile  = PFObject(className: "Profile")
+         member = PFUser.current()!
+        ```
+
