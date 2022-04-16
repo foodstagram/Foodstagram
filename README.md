@@ -24,9 +24,9 @@ Foodstagram is a convenient app to show off all your food. Keep all your meals o
 
 **Required Must-have Stories**
 
-* User can post new photo to feed
-* User can create new account
-* User can login
+[x] User can post new photo to feed
+[x] User can create new account
+[x] User can login
 * User can view a feed of photos
 
 **Optional Nice-to-have Stories**
